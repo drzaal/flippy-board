@@ -42,7 +42,7 @@ public class pcontroller : MonoBehaviour {
 
 		if (state == "onyourmark") getReady();
 		if (state == "happysurf") happySurf();
-		if (state == "ded") oNoes();
+		if (state == "ded") youDed();
 		if (state == "continue") askContinue();
 	}
 
@@ -99,13 +99,17 @@ public class pcontroller : MonoBehaviour {
 		transform.position = pos;
 
 		if (Mathf.Abs(delAngl) > 70) {
-			state = "ded";
-			vx = die_pop;
-			theta = 0;
+			oNoes();
 		}
 	}
 
 	void oNoes() {
+			state = "ded";
+			vx = die_pop;
+			theta = 0;
+	}
+
+	void youDed() {
 		vx -= Time.deltaTime * die_drop;
 
 		pos = new Vector3(
