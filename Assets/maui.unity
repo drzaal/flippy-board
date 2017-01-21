@@ -234,7 +234,11 @@ Prefab:
         type: 3}
     - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
       propertyPath: tip_rate
-      value: 82
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
+      propertyPath: lerp_factor
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c49ba685db67046419271433c8840cf4, type: 2}
@@ -260,7 +264,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.029055644
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_LocalRotation.y
@@ -272,11 +276,47 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.9995778
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3348902, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: alpha
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: omega
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: wave_speed
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
