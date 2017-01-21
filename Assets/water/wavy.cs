@@ -5,6 +5,10 @@ public class wavy : MonoBehaviour {
 	public MeshFilter mf;
 	public Mesh m;
 	public MeshRenderer mr;
+	public static float _phi;
+	public static float _omega;
+	public static float _alpha;
+	public static float _wave_speed;
 	public float phi;
 	public float omega;
 	public float alpha;
@@ -25,12 +29,12 @@ public class wavy : MonoBehaviour {
 		int i,j;
 
 		for (i=0; i< 100; i++) {
-			verts.Add(new Vector3(i* 10 - 100, 25, 0));
-			verts.Add(new Vector3(i* 10 - 100, -25, 0));
+			verts.Add(new Vector3(i* 1 - 50, 2.5F, 0));
+			verts.Add(new Vector3(i* 1 - 50, -2.5F, 0));
 			norms.Add(-Vector3.forward);
 			norms.Add(-Vector3.forward);
-			uvs.Add(Vector2.right * (i % 5) / 4);
-			uvs.Add(Vector2.one);
+			uvs.Add(Vector2.right * (i / 99F) + Vector2.up);
+			uvs.Add(Vector2.right * (i / 99F));
 
 			if (i > 0) {
 				faces[ 6 * (i - 1)+0] = 2*i-1;
@@ -60,13 +64,32 @@ public class wavy : MonoBehaviour {
 		Vector3 vert;
 		for (i=0; i<imax; i++){
 			vert = deform_verts[i];
-			vert.y = alpha * Mathf.Sin(phi + vert.x * omega) - (160F * (i % 2));
+			if (i % 2 == 0) {
+				vert.y = getCrestY(vert.x);
+				// - (160F * (i % 2));
+			} else {
+				vert.y = -2*alpha;
+			}
 			deform_verts[i] = vert;
 			//vert.y = vert.z;
 		}
 		m.vertices = deform_verts;
 
-		//mr.material.mainTextureOffset = Vector2.right * phi;
+		_phi = phi;
+		_omega = omega;
+		_alpha = alpha;
+		_wave_speed = wave_speed;
+
+		mr.material.mainTextureOffset = Vector2.right * phi / 20F;
 	
+	}
+	public static float getCrestY(float x) {
+			return _alpha * Mathf.Sin(_phi + x * _omega);
+	}
+	public static float getCrestdY(float x) {
+			return _alpha * _omega * Mathf.Cos(_phi + x * _omega);
+	}
+	public static float getCrestAngle(float x) {
+			return Mathf.Asin(getCrestdY(x));
 	}
 }

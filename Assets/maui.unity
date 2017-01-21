@@ -240,6 +240,14 @@ Prefab:
       propertyPath: lerp_factor
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
+      propertyPath: drift_back
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
+      propertyPath: board_speed
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c49ba685db67046419271433c8840cf4, type: 2}
   m_IsPrefabParent: 0
@@ -288,11 +296,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.08
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.08
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 447888, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: m_LocalScale.z
@@ -304,11 +312,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: alpha
-      value: 40
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: omega
-      value: 0.02
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: wave_speed
