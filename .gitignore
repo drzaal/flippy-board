@@ -1,0 +1,16 @@
+*.log
+.git
+*.swp
+.DS_STORE
+Temp/
+Library/
+ExprotedObj
+obj
+*.svd
+*.userprefs
+/*.csprof
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
