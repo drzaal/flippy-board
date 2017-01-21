@@ -102,7 +102,7 @@ public class pcontroller : MonoBehaviour {
 		Vector2 yaw = Quaternion.Euler(0, 0, theta) * Vector2.right;
 
 		float carve = Vector2.Dot(v, yaw);
-		float bail = Vector3.Cross(v, yaw).magnitude;
+		float bail = Vector3.Cross(v, yaw).magnitude / Mathf.Abs(carve);
 
 		if (bail > bail_threshold) {
 			oNoes();

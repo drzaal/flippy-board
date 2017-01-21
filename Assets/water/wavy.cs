@@ -33,8 +33,8 @@ public class wavy : MonoBehaviour {
 		int i,j;
 
 		for (i=0; i< 100; i++) {
-			verts.Add(new Vector3(i* 0.5F - 25, 2.5F, 0));
-			verts.Add(new Vector3(i* 0.5F - 25, -2.5F, 0));
+			verts.Add(new Vector3(i* 0.45F - 22F, 2.5F, 0));
+			verts.Add(new Vector3(i* 0.45F - 22F, -2.5F, 0));
 			norms.Add(-Vector3.forward);
 			norms.Add(-Vector3.forward);
 			uvs.Add(Vector2.right * (i / 99F) + Vector2.up);
@@ -72,7 +72,7 @@ public class wavy : MonoBehaviour {
 				vert.y = getCrestY(vert.x);
 				// - (160F * (i % 2));
 			} else {
-				vert.y = -2*alpha;
+				vert.y = -1.8F * alpha;
 			}
 			deform_verts[i] = vert;
 			//vert.y = vert.z;
@@ -88,7 +88,9 @@ public class wavy : MonoBehaviour {
 	
 	}
 	public static float getCrestY(float x) {
-			return _alpha * Mathf.Sin(_phi + x * _omega) + 10F;
+			return _alpha * Mathf.Sin(_phi + x * _omega) + 8F;
+
+			//	0.8F * _alpha * Mathf.Cos(0.711218F * _phi + 1.8F * x * _omega) + 8F;
 	}
 	public static float getCrestdY(float x) {
 			return _alpha * _omega * Mathf.Cos(_phi + x * _omega);

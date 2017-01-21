@@ -511,7 +511,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
       propertyPath: bail_threshold
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c49ba685db67046419271433c8840cf4, type: 2}
@@ -733,11 +733,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: alpha
-      value: 3.5
+      value: 4.8
       objectReference: {fileID: 0}
     - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: omega
-      value: 0.35
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 11452554, guid: 1ba62d1dab69846a6ac4b42b407c0ebd, type: 2}
       propertyPath: wave_speed
