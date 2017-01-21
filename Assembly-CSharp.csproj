@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\startscreen\startGame.cs" />
      <Compile Include="Assets\surfer\pcontroller.cs" />
      <Compile Include="Assets\water\wavy.cs" />
  <Reference Include="UnityEngine.UI">

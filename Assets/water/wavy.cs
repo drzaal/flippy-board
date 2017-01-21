@@ -18,6 +18,10 @@ public class wavy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		_phi = phi;
+		_omega = omega;
+		_alpha = alpha;
+		_wave_speed = wave_speed;
 		//Mesh m = new Mesh();
 
 		mf = gameObject.GetComponent<MeshFilter>();
@@ -29,8 +33,8 @@ public class wavy : MonoBehaviour {
 		int i,j;
 
 		for (i=0; i< 100; i++) {
-			verts.Add(new Vector3(i* 1 - 50, 2.5F, 0));
-			verts.Add(new Vector3(i* 1 - 50, -2.5F, 0));
+			verts.Add(new Vector3(i* 0.5F - 25, 2.5F, 0));
+			verts.Add(new Vector3(i* 0.5F - 25, -2.5F, 0));
 			norms.Add(-Vector3.forward);
 			norms.Add(-Vector3.forward);
 			uvs.Add(Vector2.right * (i / 99F) + Vector2.up);
@@ -90,6 +94,6 @@ public class wavy : MonoBehaviour {
 			return _alpha * _omega * Mathf.Cos(_phi + x * _omega);
 	}
 	public static float getCrestAngle(float x) {
-			return Mathf.Asin(getCrestdY(x));
+			return Mathf.Atan(getCrestdY(x));
 	}
 }
