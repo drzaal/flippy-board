@@ -16,6 +16,8 @@ public class Danger : MonoBehaviour {
 		pos -= Vector3.right * (pcontroller.main.v.x * Time.deltaTime);
 
 		transform.position = pos;
+
+		if (pos.x < -15F) Destroy(gameObject);
 	}
 
 	public virtual Vector3 getStartPosFromSeed(float seed) {
