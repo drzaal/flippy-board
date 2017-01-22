@@ -172,7 +172,7 @@ public class SerialThread
         }
         catch (Exception e)
         {
-            Debug.LogError("Unknown exception: " + e.Message + " " + e.StackTrace);
+            Debug.LogWarning("Unknown exception: " + e.Message + " " + e.StackTrace);
         }
     }
 

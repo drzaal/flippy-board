@@ -20,7 +20,10 @@ public class ButtonColor : MonoBehaviour
     public void Start()
     {
         // Might need to hard code in the PORT
-        serialController = GameObject.Find("SerialController").GetComponent<SerialController>();
+        GameObject serialControllerObj = GameObject.Find("SerialController");
+        if (serialControllerObj){
+            serialController = serialControllerObj.GetComponent<SerialController>();    
+        }        
     }
 
     // Slow strobes button

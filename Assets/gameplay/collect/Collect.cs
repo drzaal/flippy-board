@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Collect : MonoBehaviour {
 	public Vector3 pos;
+	public float randomWeight = .25f;
+	float sineWeight {
+		get {
+			return Mathf.Clamp01(1.0f - randomWeight);
+		}
+	}
 
 	Vector3 topRight;
 	Vector3 bottomRight;
@@ -35,6 +41,7 @@ public class Collect : MonoBehaviour {
 		topRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0));
 		bottomRight = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0));
 		Random.InitState(Mathf.FloorToInt(seed));
+		float value = Random.value * randomWeight + Mathf.Sin(Time.time) * sineWeight;
 		Vector3 result = topRight + (bottomRight - topRight) * Random.value;
 		result.z = 0;
 		return result;
