@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Rock : Danger {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public override Vector3 getStartPosFromSeed(float seed) {
+		return new Vector3(
+			20F,
+			40F * seed - 5F,
+			0F
+		);
 	}
 }

@@ -446,6 +446,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1226883a1a27a436abdb957d1fecdb29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _rock: {fileID: 114855067323299060, guid: 6942b138693ac41b68fb4b18b43dacfa, type: 2}
+  _shark: {fileID: 114900561144292294, guid: ca276841f358f467dbea528d23f104eb, type: 2}
+  _bird: {fileID: 114985032499020414, guid: 7251b35f5395d4ea5975d349fa3a1eb1, type: 2}
+  thret_level: 0.992
 --- !u!4 &1089773358
 Transform:
   m_ObjectHideFlags: 0
