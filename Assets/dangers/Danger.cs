@@ -25,6 +25,8 @@ public class Danger : MonoBehaviour {
 			);
 			//Destroy(gameObject);
 		}
+
+		if (pcontroller.main.state != "happysurf") Destroy(gameObject);
 	}
 
 	public virtual Vector3 getStartPosFromSeed(float seed) {
