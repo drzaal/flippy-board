@@ -38,6 +38,8 @@ public class pcontroller : MonoBehaviour {
 	public float gameover_timer;
 	public Animator sun_animator;
 
+	public ButtonColor buttonColor;
+
 	public static pcontroller main;
 
 	Score score;
@@ -152,6 +154,7 @@ public class pcontroller : MonoBehaviour {
 
 		//transform.rotation.t;
 		if (Input.GetKey("up") || Input.GetKey("space")) {
+			buttonColor.modeDie();
 			theta = Mathf.Lerp(theta, high_bound, lerp_factor * Time.deltaTime);
 		} else {
 			theta = Mathf.Lerp(theta, low_bound, lerp_factor * Time.deltaTime);
