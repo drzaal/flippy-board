@@ -248,6 +248,7 @@ public class pcontroller : MonoBehaviour {
 			if (collect){
 				sun_animator.SetTrigger("good");
 				score++;
+				Destroy(collect.gameObject);
 			}
 		}
 
