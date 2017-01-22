@@ -21,7 +21,7 @@ public class DangerFactory : MonoBehaviour {
 		float threat_val;
 
 		if (Random.Range(0F, 1F) > thret_level) {
-			threat_type = Random.Range(0, 2);
+			threat_type = Random.Range(0, 3);
 			threat_val = Random.Range(0F, 1F);
 
 			switch (threat_type) {

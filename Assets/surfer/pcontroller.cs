@@ -122,9 +122,9 @@ public class pcontroller : MonoBehaviour {
 		Vector2 yaw = Quaternion.Euler(0, 0, theta) * Vector2.right;
 
 		float carve = Vector2.Dot(v, yaw);
-		float bail = Vector3.Cross(v, yaw).magnitude / Mathf.Abs(carve);
+		float bail = Mathf.Pow(Vector2.Angle(v, yaw) / 180, 2) * v.magnitude;
 
-		if (bail > bail_threshold) {
+		if (bail > bail_threshold) { // Disable bail
 			oNoes();
 		}
 
@@ -166,7 +166,7 @@ public class pcontroller : MonoBehaviour {
 
 		transform.position = pos;
 
-		if (pos.y < -20F) oNoes();
+		if (pos.y < -5F) oNoes();
 	}
 
 	void oNoes() {
@@ -189,7 +189,7 @@ public class pcontroller : MonoBehaviour {
 
 		transform.rotation = Quaternion.Euler(Vector3.forward * Time.time * dead_spin);
 
-		if (pos.y < -50F) {
+		if (pos.y < -10F) {
 			enableContinueCountdown();
 		}
 	}
