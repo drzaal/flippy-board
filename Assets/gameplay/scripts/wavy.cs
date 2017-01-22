@@ -62,7 +62,7 @@ public class wavy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		phi -= Time.deltaTime * (wave_speed - pcontroller.main.v.x / 3);
+		phi -= Time.deltaTime * (wave_speed - pcontroller.main.v.x * 4);
 
 		int i, imax = m.vertices.Length;
 		Vector3 vert;
@@ -84,7 +84,8 @@ public class wavy : MonoBehaviour {
 		_alpha = alpha;
 		_wave_speed = wave_speed;
 
-		mr.material.mainTextureOffset = Vector2.right * phi / 20F;
+		mr.material.mainTextureOffset = Vector2.right * 
+			(phi) / 20F;
 	
 	}
 	public static float getCrestY(float x) {

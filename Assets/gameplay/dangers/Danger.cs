@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Danger : MonoBehaviour {
 	public Vector3 pos;
+	public bool isShark = false;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +31,7 @@ public class Danger : MonoBehaviour {
 	}
 
 	public virtual Vector3 getStartPosFromSeed(float seed) {
+		isShark = false;
 		return Vector3.zero;
 	}
 }

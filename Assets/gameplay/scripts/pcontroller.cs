@@ -55,7 +55,7 @@ public class pcontroller : MonoBehaviour {
 		Dictionary<string, AudioClip> sm = new Dictionary<string, AudioClip>();
 		int i = 0, imax = sfx_list.Length, jmax = sfx_names.Length;
 		for (i=0; i< Mathf.Min(imax, jmax); i++) {
-			//sfx_map.Add(sfx_names[i], sfx_list[i]);
+			sm.Add(sfx_names[i], sfx_list[i]);
 		}
 
 		return sm;
@@ -101,6 +101,7 @@ public class pcontroller : MonoBehaviour {
 
 	void startSurf() {
 		gameover_timer = 10;
+		sfx.PlayOneShot(sfx_map["cowabunga"]);
 		state = "happysurf";
 		pos = new Vector3(0, wavy.getCrestY(0), pos.z);
 		v = Vector2.right;
@@ -137,10 +138,10 @@ public class pcontroller : MonoBehaviour {
 		float crestY = wavy.getCrestY(pos.x);
 
 		if (pos.y < crestY) {
-			//if (airtime) sfx.PlayOneShot(sfx_map["crest"]);
+			if (airtime) sfx.PlayOneShot(sfx_map["crest"]);
 			airtime = false;
 		} else {
-			//if (!airtime) sfx.PlayOneShot(sfx_map["crest"]);
+			if (!airtime) sfx.PlayOneShot(sfx_map["crest"]);
 			airtime = true;
 		}
 
@@ -169,11 +170,12 @@ public class pcontroller : MonoBehaviour {
 		if (pos.y < -5F) oNoes();
 	}
 
-	void oNoes() {
+	void oNoes(bool isShark = false) {
 		state = "ded";
 		v.y = die_pop;
 		theta = 0;
-		sfx.Play();
+		if (isShark) sfx.PlayOneShot(sfx_map["shark"]);
+		else sfx.PlayOneShot(sfx_map["ded"]);
 	}
 
 	void youDed() {
@@ -220,7 +222,13 @@ public class pcontroller : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (state == "happysurf") oNoes();
+		if (state == "happysurf") {
+			if (coll.gameObject.GetComponent<Danger>().isShark) {
+				oNoes(true);
+			} else {
+				oNoes();
+			}
+		}
 
 	}
 }
