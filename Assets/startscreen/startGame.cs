@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class startGame : MonoBehaviour {
+	public Text startPrompt;
 
 	// Use this for initialization
 	void Start () {
@@ -11,7 +12,15 @@ public class startGame : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown("space")) {
+
+		startPrompt.color = new Color(
+			1,
+			1,
+			1,
+			Mathf.Abs(Mathf.Sin( Time.time ))
+		);
+
+		if (Input.GetKeyDown("space") || Input.GetKey("up")) {
 			SceneManager.LoadScene("maui");
 		}
 	

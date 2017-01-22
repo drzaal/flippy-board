@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: c0a7399b15dd94223805aeb7faad2730
+timeCreated: 1485045628
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Tiki Tropic Outline
+  fontNames:
+  - Tiki Tropic Outline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
