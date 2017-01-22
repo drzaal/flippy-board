@@ -62,7 +62,7 @@ public class wavy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		phi -= Time.deltaTime * wave_speed;
+		phi -= Time.deltaTime * (wave_speed - pcontroller.main.v.x / 3);
 
 		int i, imax = m.vertices.Length;
 		Vector3 vert;

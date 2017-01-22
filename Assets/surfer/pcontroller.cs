@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System.Collections;
+using System.Collections.Generic;
 
 public class pcontroller : MonoBehaviour {
 
@@ -25,20 +25,40 @@ public class pcontroller : MonoBehaviour {
 	public float gravity;
 
 	public Vector3 pos;
-	Vector2 v;
+	public Vector2 v;
 	public bool airtime = false;
+
+	public AudioClip[] sfx_list;
+	public string[] sfx_names;
+	public Dictionary<string, AudioClip> sfx_map;
+	public AudioSource sfx;
 
 	public Text gtxt;
 	public Text gtimedown;
 
 	public float gameover_timer;
+	public static pcontroller main;
 
 	// Use this for initialization
 	void Start () {
+		main = this;
+		sfx_map = mapSfx();
+		sfx = GetComponent<AudioSource>();
+
 		transform.position = Vector3.up * -20F;
 		pos = transform.position;
 
 		onYourMark();
+	}
+	
+	Dictionary<string, AudioClip> mapSfx() {
+		Dictionary<string, AudioClip> sm = new Dictionary<string, AudioClip>();
+		int i = 0, imax = sfx_list.Length, jmax = sfx_names.Length;
+		for (i=0; i< Mathf.Min(imax, jmax); i++) {
+			//sfx_map.Add(sfx_names[i], sfx_list[i]);
+		}
+
+		return sm;
 	}
 	
 	// Update is called once per frame
@@ -117,8 +137,10 @@ public class pcontroller : MonoBehaviour {
 		float crestY = wavy.getCrestY(pos.x);
 
 		if (pos.y < crestY) {
+			//if (airtime) sfx.PlayOneShot(sfx_map["crest"]);
 			airtime = false;
 		} else {
+			//if (!airtime) sfx.PlayOneShot(sfx_map["crest"]);
 			airtime = true;
 		}
 
@@ -151,6 +173,7 @@ public class pcontroller : MonoBehaviour {
 		state = "ded";
 		v.y = die_pop;
 		theta = 0;
+		sfx.Play();
 	}
 
 	void youDed() {
