@@ -12,12 +12,15 @@ public class Danger : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected virtual void Update () {
 		pos -= Vector3.right * (pcontroller.main.v.x * Time.deltaTime);
 
 		transform.position = pos;
 
-		if (pos.x < -15F) Destroy(gameObject);
+		if (pos.x < -20F) {
+			pos += Vector3.right * 20F;
+			//Destroy(gameObject);
+		}
 	}
 
 	public virtual Vector3 getStartPosFromSeed(float seed) {

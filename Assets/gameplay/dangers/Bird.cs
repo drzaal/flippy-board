@@ -7,7 +7,7 @@ public class Bird : Danger {
 	public override Vector3 getStartPosFromSeed(float seed) {
 		return new Vector3(
 			20F,
-			40F * seed,
+			20F * seed + 5F,
 			0F
 		);
 	}
