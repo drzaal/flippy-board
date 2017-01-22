@@ -8,9 +8,10 @@ ExprotedObj
 obj
 *.svd
 *.userprefs
-/*.csprof
+/*.csproj
 *.pidb
 *.suo
 /*.sln
 *.user
 *.unityproj
+build

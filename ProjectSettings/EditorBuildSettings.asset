@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/levels/maui.unity
-  - enabled: 1
     path: Assets/levels/title.unity
+  - enabled: 1
+    path: Assets/levels/maui.unity
