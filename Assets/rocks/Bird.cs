@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shark : Danger {
+public class Bird : Danger {
 
 	public override Vector3 getStartPosFromSeed(float seed) {
 		return new Vector3(
 			20F,
-			40F * seed - 5F,
+			40F * seed,
 			0F
 		);
 	}
