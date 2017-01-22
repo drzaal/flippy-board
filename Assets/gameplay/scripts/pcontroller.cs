@@ -110,7 +110,9 @@ public class pcontroller : MonoBehaviour {
 		gameover_timer = 10;
 		sfx.PlayOneShot(sfx_map["cowabunga"]);
 		state = "happysurf";
-		pos = new Vector3(0, wavy.getCrestY(0), pos.z);
+
+		pos = new Vector3(0, 8.0f, pos.z);
+
 		v = Vector2.right;
 		gtxt.enabled = false;
 		gtimedown.enabled = false;
@@ -133,7 +135,8 @@ public class pcontroller : MonoBehaviour {
 		float bail = Mathf.Pow(Vector2.Angle(v, yaw) / 180, 2) * v.magnitude;
 
 		if (bail > bail_threshold) { // Disable bail
-			oNoes();
+			Debug.Log("Carving: carve=" + carve + " bail=" + bail + " threshold=" + bail_threshold + " crestY=" + crestY);
+//			oNoes();
 		}
 
 		//v =  v + board_speed * Vector2.one * Vector2.
