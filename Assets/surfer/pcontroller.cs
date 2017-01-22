@@ -220,7 +220,7 @@ public class pcontroller : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		oNoes();
+		if (state == "happysurf") oNoes();
 
 	}
 }
