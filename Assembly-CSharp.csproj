@@ -49,11 +49,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\rocks\Bird.cs" />
-     <Compile Include="Assets\rocks\Danger.cs" />
-     <Compile Include="Assets\rocks\DangerFactory.cs" />
-     <Compile Include="Assets\rocks\Rock.cs" />
-     <Compile Include="Assets\rocks\Shark.cs" />
+     <Compile Include="Assets\dangers\Bird.cs" />
+     <Compile Include="Assets\dangers\Danger.cs" />
+     <Compile Include="Assets\dangers\DangerFactory.cs" />
+     <Compile Include="Assets\dangers\Rock.cs" />
+     <Compile Include="Assets\dangers\Shark.cs" />
      <Compile Include="Assets\startscreen\startGame.cs" />
      <Compile Include="Assets\surfer\pcontroller.cs" />
      <Compile Include="Assets\water\wavy.cs" />

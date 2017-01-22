@@ -218,4 +218,9 @@ public class pcontroller : MonoBehaviour {
 			startSurf();
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D coll) {
+		oNoes();
+
+	}
 }
