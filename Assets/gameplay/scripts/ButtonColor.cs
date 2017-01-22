@@ -17,45 +17,45 @@ public class ButtonColor : MonoBehaviour
     public SerialController serialController;
 
     // Initialization
-    void Start()
+    public void Start()
     {
         // Might need to hard code in the PORT
         serialController = GameObject.Find("SerialController").GetComponent<SerialController>();
     }
 
     // Slow strobes button
-    void modeAttract() 
+    public void modeAttract() 
     {
 	serialController.SendSerialMessage("A");
     }
 
     // Button on solid
-    void modeOn()
+    public void modeOn()
     {
 	serialController.SendSerialMessage("1");
     }
 
     // Button light off
-    void modeOff()
+    public void modeOff()
     {
 	serialController.SendSerialMessage("0");
     }
 
     // Button quick fades out and flahshes briefly
-    void modeDie()
+    public void modeDie()
     {
 	serialController.SendSerialMessage("X");
     }
 
     // Button flashes fast several times
-    void modeWin()
+    public void modeWin()
     {
 	serialController.SendSerialMessage("W");
     }
 
     // Executed each frame
     // We are not expecting to recieve any messages but serial connection established
-    void Update()
+    public void Update()
     {
         //---------------------------------------------------------------------
         // Receive data
