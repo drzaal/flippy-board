@@ -5,13 +5,12 @@ using UnityEngine;
 public class WavyMove : StateMachineBehaviour {
 	public float waveMagnitude;
 	public float waveFrequency;
-
-	Vector3 initialPosition;
+	public float sunHeight = 0;
 	float startTime;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		initialPosition = animator.transform.position;
+		sunHeight = animator.transform.position.y;
 		startTime = Time.time;
 	}
 
@@ -19,7 +18,7 @@ public class WavyMove : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		Vector3 position = animator.transform.position;
 		float t = Time.time - startTime;
-		position.y = initialPosition.y + waveMagnitude * Mathf.Sin(t * waveFrequency);
+		position.y = sunHeight + waveMagnitude * Mathf.Sin(t * waveFrequency);
 		animator.transform.position = position;
 	}
 

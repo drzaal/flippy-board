@@ -40,6 +40,8 @@ public class pcontroller : MonoBehaviour {
 
 	public static pcontroller main;
 
+	Score score;
+
 	// Use this for initialization
 	void Start () {
 		main = this;
@@ -48,6 +50,8 @@ public class pcontroller : MonoBehaviour {
 
 		transform.position = Vector3.up * -20F;
 		pos = transform.position;
+
+		score = Object.FindObjectOfType<Score>();
 
 		onYourMark();
 	}
@@ -172,10 +176,10 @@ public class pcontroller : MonoBehaviour {
 	}
 
 	void oNoes(bool isShark = false) {
+		sun_animator.SetTrigger("fffuuuu");
 		state = "ded";
 		v.y = die_pop;
 		theta = 0;
-		sun_animator.SetTrigger("fffuuuu");
 		if (isShark) sfx.PlayOneShot(sfx_map["shark"]);
 		else sfx.PlayOneShot(sfx_map["ded"]);
 	}
@@ -225,10 +229,19 @@ public class pcontroller : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (state == "happysurf") {
-			if (coll.gameObject.GetComponent<Danger>().isShark) {
-				oNoes(true);
-			} else {
-				oNoes();
+			Danger danger = coll.gameObject.GetComponent<Danger>();
+			if (danger){
+				if (danger.isShark) {
+					oNoes(true);
+				} else {
+					oNoes();
+				}
+			} 
+
+			Collect collect = coll.gameObject.GetComponent<Collect>();
+			if (collect){
+				sun_animator.SetTrigger("good");
+				score++;
 			}
 		}
 
