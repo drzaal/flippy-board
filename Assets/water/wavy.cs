@@ -88,8 +88,8 @@ public class wavy : MonoBehaviour {
 	
 	}
 	public static float getCrestY(float x) {
-			return _alpha * Mathf.Sin(_phi + x * _omega) + 8F;
-
+				return _alpha * 1 + 8F;
+		
 			//	0.8F * _alpha * Mathf.Cos(0.711218F * _phi + 1.8F * x * _omega) + 8F;
 	}
 	public static float getCrestdY(float x) {
