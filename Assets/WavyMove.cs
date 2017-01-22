@@ -19,7 +19,7 @@ public class WavyMove : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		Vector3 position = animator.transform.position;
 		float t = Time.time - startTime;
-		position.y = waveMagnitude * Mathf.Sin(t * waveFrequency);
+		position.y = initialPosition.y + waveMagnitude * Mathf.Sin(t * waveFrequency);
 		animator.transform.position = position;
 	}
 

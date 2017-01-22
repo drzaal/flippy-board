@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class pcontroller : MonoBehaviour {
-
 	public bool keyDown;
 
 	public float theta = 0;
@@ -37,6 +36,8 @@ public class pcontroller : MonoBehaviour {
 	public Text gtimedown;
 
 	public float gameover_timer;
+	public Animator sun_animator;
+
 	public static pcontroller main;
 
 	// Use this for initialization
@@ -174,6 +175,7 @@ public class pcontroller : MonoBehaviour {
 		state = "ded";
 		v.y = die_pop;
 		theta = 0;
+		sun_animator.SetTrigger("fffuuuu");
 		if (isShark) sfx.PlayOneShot(sfx_map["shark"]);
 		else sfx.PlayOneShot(sfx_map["ded"]);
 	}
