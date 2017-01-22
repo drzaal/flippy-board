@@ -15,4 +15,5 @@ obj
 *.user
 *.unityproj
 *autosave.kra
-build
+builds
+
