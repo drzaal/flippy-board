@@ -5,6 +5,8 @@ using UnityEngine;
 public class Collect : MonoBehaviour {
 	public Vector3 pos;
 	public float randomWeight = .25f;
+	public GameObject collectFx;
+
 	float sineWeight {
 		get {
 			return Mathf.Clamp01(1.0f - randomWeight);

@@ -21,4 +21,8 @@ public class Score : MonoBehaviour {
 		score.score++;
 		return score;
 	}
+
+	public void Reset(){
+		score = 0;
+	}
 }

@@ -66,6 +66,7 @@ MonoBehaviour:
   gameover_timer: 0
   sun_animator: {fileID: 0}
   buttonColor: {fileID: 0}
+  particlePopout: 5
 --- !u!212 &21273396
 SpriteRenderer:
   m_ObjectHideFlags: 1

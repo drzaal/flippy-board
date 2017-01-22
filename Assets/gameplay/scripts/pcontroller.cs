@@ -39,6 +39,7 @@ public class pcontroller : MonoBehaviour {
 	public Animator sun_animator;
 
 	public ButtonColor buttonColor;
+	public float particlePopout = 25;
 
 	public static pcontroller main;
 
@@ -108,6 +109,7 @@ public class pcontroller : MonoBehaviour {
 
 	void startSurf() {
 		gameover_timer = 10;
+		score.Reset();
 		sfx.PlayOneShot(sfx_map["cowabunga"]);
 		state = "happysurf";
 
@@ -248,6 +250,10 @@ public class pcontroller : MonoBehaviour {
 			if (collect){
 				sun_animator.SetTrigger("good");
 				score++;
+				if (collect.collectFx){
+					GameObject fxObj = (GameObject)GameObject.Instantiate(collect.collectFx);
+					fxObj.transform.position = transform.position - Vector3.forward*particlePopout;
+				}
 				Destroy(collect.gameObject);
 			}
 		}

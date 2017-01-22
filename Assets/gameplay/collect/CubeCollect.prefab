@@ -142,3 +142,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pos: {x: 0, y: 0, z: 0}
   randomWeight: 0.25
+  collectFx: {fileID: 1035753053044632, guid: f01ef3ad9047f404199fe4056112fc5e, type: 2}
