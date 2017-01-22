@@ -919,6 +919,10 @@ Prefab:
       propertyPath: sfx_names.Array.data[3]
       value: shark
       objectReference: {fileID: 0}
+    - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
+      propertyPath: sun_animator
+      value: 
+      objectReference: {fileID: 1526726187}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c49ba685db67046419271433c8840cf4, type: 2}
   m_IsPrefabParent: 0
@@ -1016,6 +1020,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &1526726187 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95077582643502310, guid: 73f208b4db8f042d1900cfb37a9b2e3e,
+    type: 2}
+  m_PrefabInternal: {fileID: 2010475218}
 --- !u!1 &1881745128
 GameObject:
   m_ObjectHideFlags: 0
@@ -1137,7 +1146,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4470812960398770, guid: 73f208b4db8f042d1900cfb37a9b2e3e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.8
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 4470812960398770, guid: 73f208b4db8f042d1900cfb37a9b2e3e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1163,42 +1172,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 4470812960398770, guid: 73f208b4db8f042d1900cfb37a9b2e3e, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4470812960398770, guid: 73f208b4db8f042d1900cfb37a9b2e3e, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 212369959876906754, guid: 73f208b4db8f042d1900cfb37a9b2e3e,
+    - target: {fileID: 95077582643502310, guid: 73f208b4db8f042d1900cfb37a9b2e3e,
         type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 8234d52437e614681874e6050e684ae7,
-        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 73f208b4db8f042d1900cfb37a9b2e3e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2126218824 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1835558470161224, guid: 73f208b4db8f042d1900cfb37a9b2e3e,
-    type: 2}
-  m_PrefabInternal: {fileID: 2010475218}
---- !u!95 &2126218825
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2126218824}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ed5c294cbe6d9455eabe154d4d7d5fd8, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
