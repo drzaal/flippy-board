@@ -18,7 +18,11 @@ public class Danger : MonoBehaviour {
 		transform.position = pos;
 
 		if (pos.x < -20F) {
-			pos += Vector3.right * 20F;
+			pos = new Vector3(
+				20F,
+				pos.y,
+				pos.z
+			);
 			//Destroy(gameObject);
 		}
 	}
