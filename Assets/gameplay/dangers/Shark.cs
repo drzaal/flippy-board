@@ -13,6 +13,7 @@ public class Shark : Danger {
 
 	public override Vector3 getStartPosFromSeed(float seed) {
 		mai_thyme = Time.time;
+		isShark = true;
 		return new Vector3(
 			20F,
 			11F * seed - 2F,

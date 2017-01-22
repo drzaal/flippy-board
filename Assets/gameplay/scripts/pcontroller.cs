@@ -170,11 +170,12 @@ public class pcontroller : MonoBehaviour {
 		if (pos.y < -5F) oNoes();
 	}
 
-	void oNoes() {
+	void oNoes(bool isShark = false) {
 		state = "ded";
 		v.y = die_pop;
 		theta = 0;
-		sfx.Play();
+		if (isShark) sfx.PlayOneShot(sfx_map["shark"]);
+		else sfx.PlayOneShot(sfx_map["ded"]);
 	}
 
 	void youDed() {
@@ -221,7 +222,13 @@ public class pcontroller : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		if (state == "happysurf") oNoes();
+		if (state == "happysurf") {
+			if (coll.gameObject.GetComponent<Danger>().isShark) {
+				oNoes(true);
+			} else {
+				oNoes();
+			}
+		}
 
 	}
 }

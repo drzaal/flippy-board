@@ -784,11 +784,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
       propertyPath: sfx_list.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
       propertyPath: sfx_names.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 452294, guid: c49ba685db67046419271433c8840cf4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -911,6 +911,14 @@ Prefab:
       propertyPath: sfx_list.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: fa949c33da9c24692b3bd67eec181fdf, type: 3}
+    - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
+      propertyPath: sfx_list.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: d459c24fb9ae140d48892fac4337dff9, type: 3}
+    - target: {fileID: 11493292, guid: c49ba685db67046419271433c8840cf4, type: 2}
+      propertyPath: sfx_names.Array.data[3]
+      value: shark
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c49ba685db67046419271433c8840cf4, type: 2}
   m_IsPrefabParent: 0
