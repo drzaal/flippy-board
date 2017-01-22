@@ -89,7 +89,12 @@ public class wavy : MonoBehaviour {
 	
 	}
 	public static float getCrestY(float x) {
-				return _alpha * 1 + 8F;
+		float y = _alpha * 1 + 8F;
+		float crash_wake = CrashWave.main.pos.x;
+		if (x < crash_wake) {
+			y += x - crash_wake;
+		}
+		return y;
 		
 			//	0.8F * _alpha * Mathf.Cos(0.711218F * _phi + 1.8F * x * _omega) + 8F;
 	}
