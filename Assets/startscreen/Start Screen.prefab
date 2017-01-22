@@ -26,7 +26,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 104000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35097b29bbda8404d84dbb36b241265d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9bedaa7cdd8124407b2cc2c7d93df31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   startPrompt: {fileID: 11493012}
@@ -42,7 +42,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.7071803}
+  m_Color: {r: 0.5735294, g: 0.33622032, b: 0, a: 0.7071803}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -86,7 +86,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -201.5}
+  m_AnchoredPosition: {x: 0, y: -198}
   m_SizeDelta: {x: 389, y: 187}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &100100000
