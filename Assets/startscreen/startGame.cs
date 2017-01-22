@@ -14,9 +14,9 @@ public class startGame : MonoBehaviour {
 	void Update () {
 
 		startPrompt.color = new Color(
-			1,
-			1,
-			1,
+			startPrompt.color.r,
+			startPrompt.color.g,
+			startPrompt.color.b,
 			Mathf.Abs(Mathf.Sin( Time.time ))
 		);
 
