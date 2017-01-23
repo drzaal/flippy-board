@@ -201,6 +201,8 @@ public class pcontroller : MonoBehaviour {
 			pos.z
 		);
 
+		score.OnDed();
+
 		transform.position = pos;
 
 		transform.rotation = Quaternion.Euler(Vector3.forward * Time.time * dead_spin);

@@ -25,4 +25,19 @@ public class Score : MonoBehaviour {
 	public void Reset(){
 		score = 0;
 	}
+
+	public void OnDed() {
+		if (score > HiScore){
+			HiScore = score;
+		}
+	}
+
+	int HiScore {
+		get {
+			return PlayerPrefs.GetInt("HiScore", 0);
+		}
+		set {
+			PlayerPrefs.SetInt("HiScore", value);
+		}
+	}
 }
