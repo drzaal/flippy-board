@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html><head><title>FLIPPY BOARD - AMAZING SURFING GAME</title>
+<style>
+html {
+    background: #55f url("bgclouds.png");
+    font-family: "Times New Roman", "Times";
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 2em;
+    padding: 0px;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: xx-large;
+    color: #ff7;
+}
+
+.content {
+    border: outset #ff7 4px;
+    max-width: 760px;
+    margin: 16px auto;
+    background: rgba(0,0,0,0.3);
+    padding: 8px 16px;
+}
+</style>
+
+<script>
+window.onload = function() {
+    var visible = true;
+    var blinker = document.getElementById("blinker");
+    window.setInterval(function() {
+        visible = !visible;
+        blinker.style.setProperty("opacity", visible ? 100 : 0);
+    }, 500);
+}
+</script>
+
+</head><body>
+<h1 id="blinker">Flippy Board - A Fantastic New Surfing Game For 2017</h1>
+
+<img src="screenshot1.png" alt="Amazing surfing action!!!" width=800 height=448>
+
+<div class="content">
+<p>Welcome to Flippy Board, the most realistic surfing game simulator in 2017 ever! Take control of a surfer who must flip the board up and down, avoiding obstacles and collecting tokens! It is the most fun you will have surfing, GUARANTEED!</p>
+</div>
+
+</body>
+</html>
